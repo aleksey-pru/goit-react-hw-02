@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="container">
       <Description />
-      <Options updateFeedback={updateFeedback} />
+      <Options updateFeedback={updateFeedback} hasFeedback={hasFeedback} />
       {hasFeedback ? (
         <Feedback
           {...voting}

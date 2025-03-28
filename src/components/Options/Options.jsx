@@ -1,11 +1,13 @@
 import s from "./Options.module.css";
-const Options = ({ updateFeedback }) => {
+const Options = ({ updateFeedback, hasFeedback }) => {
   return (
     <div className={s.container}>
       <button onClick={() => updateFeedback("good")}>Good</button>
       <button onClick={() => updateFeedback("neutral")}>Neutral</button>
       <button onClick={() => updateFeedback("bad")}>Bad</button>
-      <button onClick={() => updateFeedback("reset")}>Reset</button>
+      {hasFeedback && (
+        <button onClick={() => updateFeedback("reset")}>Reset</button>
+      )}
     </div>
   );
 };
